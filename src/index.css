@@ -1,0 +1,65 @@
+@import "tailwindcss";
+::selection {
+  background-color: #1cd2ad;
+}
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*{
+  font-family: var(--font-montserrat) ;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} 
+
+.animate-marquee {
+  animation: marquee 72s linear infinite;
+}
+
+[dir="rtl"] .animate-marquee,
+html[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused !important;
+}
+.marquee-track:hover,
+.marquee-track:hover * {
+  animation-play-state: paused !important;
+}
+
+
+:root{
+  --image-radius:10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button{
+  cursor: pointer;
+}
+
+.animated-section {
+  opacity: 0;
+  transform: translateY(70px);
+  transition:
+    opacity 0.9s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,276 @@
+{
+  "navbar": {
+    "services": "Services",
+    "projects": "Projects",
+    "partners": "Partners ",
+    "calculators": "Calculators",
+    "insights": "Insights",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "rateWebsite": "Site Assessment",
+    "requestEvaluation": "Request a site assessment"
+  },
+  "Hero":{
+    "smallText":"Riyadh · Saudi Arabia",
+    "smallTItle":"Saudi engineering · Sole Oxycom partner in Saudi Arabia",
+    "title":"Cooling that costs less to run.",
+    "desc":"Oxycom's IDEC (Indirect Direct Evaporative Cooling), Hisense VRF, Enercoat energy-saving coil coatings, building analytics and full MEP — Dosan Energy cuts cooling electricity across Saudi Arabia, designed, installed and maintained by one Riyadh-based engineering team.",
+    "btn1":"Request a Site Assessment →",
+    "btn2":"See Our Projects →",
+    "scrollHint":"Scroll to Explore"
+  },
+  "Static": {
+    "tag": "MEASURED RESULTS",
+    "title": "Proven onsite, not in brochures.",
+    "subtitle": "Every number below is taken from an actual Dosan Energy installation within the Kingdom.",
+    "metrics": {
+      "alfanar": {
+        "unit": "",
+        "label": "IntrCooll Plus units at Alfanar HVDC factory"
+      },
+      "damac": {
+        "unit": "%",
+        "label": "Chiller energy savings using PreCooll at DAMAC Edgnex"
+      },
+      "extra": {
+        "unit": "⃁",
+        "label": "Monthly savings at eXtra Al-Worood"
+      },
+      "coolingCost": {
+        "unit": "%",
+        "label": "Reduction in cooling costs"
+      },
+      "tempDrop": {
+        "unit": "°C",
+        "label": "Air temperature reduction before intake"
+      }
+    }
+  },
+  "AboutUs": {
+    "tag": "Who we are",
+    "title": "A Saudi engineering team, accountable for the number on the bill.",
+    "desc1": "Dosan Energy is based in Riyadh and works across the Kingdom. We bring best-in-class cooling technology — Oxycom indirect evaporative cooling, Hisense VRF, Ener.co coatings — and take the whole scope: engineering and design, installation, commissioning, analytics and maintenance.",
+    "desc2": "One team is answerable for the result, which is why our case studies quote energy and cost outcomes rather than equipment lists.",
+    "features": {
+      "engineering": {
+        "title": "Engineering & design",
+        "desc": "Load, selection, drawings"
+      },
+      "mep": {
+        "title": "MEP delivery",
+        "desc": "Installation and commissioning"
+      },
+      "analytics": {
+        "title": "Analytics & FDD",
+        "desc": "Performance held after handover"
+      }
+    },
+    "cta": "Discover our services",
+    "arr":"→"
+  },
+  "KitchenSolution": {
+    "overline": "Flagship Solution · Kitchen Make-up Air",
+    "title": "Cooler kitchens, lower bills.",
+    "desc": "Every cubic metre your hood extracts must come back in. IntrCooll delivers it cooled, filtered and 100% fresh — at a fraction of the capex and opex of a DX fresh-air unit, with zero refrigerant above the kitchen.",
+    "feature1": "Cooled fresh make-up air, up to 20°C below outdoor temperature",
+    "feature2": "Fraction of the capital and electricity cost of a DX fresh-air unit",
+    "feature3": "Already running in restaurants across the Kingdom",
+    "btnPrimary": "See how IntrCooll kitchen make-up air works",
+    "btnSecondary": "All Services"
+  },
+  "ClientsMarquee": {
+    "tag": "Clients & References",
+    "title": "Delivered for operators across the Kingdom.",
+    "clients": {
+      "almarai": "Almarai",
+      "damac": "DAMAC",
+      "edgnex": "EDGNEX Data Centers by DAMAC",
+      "alfanar": "Alfanar",
+      "extra": "eXtra",
+      "ncb": "NCB Al Ahli",
+      "engie": "ENGIE",
+      "sattam-univ": "Prince Sattam Bin Abdulaziz University",
+      "othaim": "Abdullah Al Othaim Markets",
+      "tera-mall": "Tera Mall",
+      "blvd-world": "BLVD World",
+      "sela": "Sela",
+      "shahia": "Shahia Food",
+      "dunkin": "Dunkin' Donuts",
+      "deraah": "Deraah",
+      "fipco": "FIPCO",
+      "khayal": "Khayal Restaurant",
+      "century": "Century Burger",
+      "american-school": "American International School, Riyadh"
+    }
+  },
+  "Services": {
+    "tag": "SERVICES",
+    "title": "Our business lines",
+    "subtitle": "Five ways to cut cooling costs — one accountable team.",
+    "cta": "Request a site assessment",
+    "explore": "Explore",
+    "items": {
+      "kitchen": {
+        "title": "Kitchen Makeup Air",
+        "desc": "Cooled, filtered makeup air for commercial kitchens."
+      },
+      "idec": {
+        "title": "Oxycom IDEC Technology",
+        "desc": "Indirect evaporative cooling — Sole Oxycom partner in Saudi Arabia."
+      },
+      "precooll": {
+        "title": "PreCooll Chiller Pre-Cooling",
+        "desc": "Adiabatic pre-cooling for condenser air — up to 25°C drop."
+      },
+      "vrf": {
+        "title": "Hisense VRF Systems",
+        "desc": "Variable refrigerant flow for multi-zone buildings, pre-engineered."
+      },
+      "coatings": {
+        "title": "Energy-Saving HVAC Coatings",
+        "desc": "Enercoat coil coatings as part of efficiency retrofits."
+      },
+      "analytics": {
+        "title": "Building Analytics & FDD",
+        "desc": "Fault detection and diagnostics on operating systems."
+      },
+      "mep": {
+        "title": "MEP Services",
+        "desc": "Installation, commissioning and maintenance under one contract."
+      },
+      "engineering": {
+        "title": "Engineering & Design",
+        "desc": "Load calculations, equipment selection, and design drawings."
+      }
+    }
+  },
+  "Calculators": {
+    "tag": "Calculators",
+    "title": "See what better cooling could save.",
+    "desc": "Two engineering tools, open assumptions. Compare Hisense VRF against a conventional system, or IntrCooll against DX on electricity, cost and CO₂.",
+    "cta": "Open the Calculators",
+    "tools": {
+      "tool1": {
+        "tag": "Tool 01",
+        "title": "VRF Calculator",
+        "desc": "Hisense VRF against a conventional system — capacity and indicative budget.",
+        "cta": "Open"
+      },
+      "tool2": {
+        "tag": "Tool 02",
+        "title": "IDEC Savings Calculator",
+        "desc": "IntrCooll against DX — electricity, running cost and CO₂ avoided.",
+        "cta": "Open"
+      }
+    }
+  },
+  "Projects": {
+    "tag": "Projects",
+    "title": "Delivered in the Kingdom, measured on site.",
+    "hoverHint": "Hover a project to preview",
+    "items": {
+      "alfanar": {
+        "title": "Alfanar HVDC Factory",
+        "category": "IntrCooll Plus · 117 units",
+        "location": "Riyadh"
+      },
+      "damac": {
+        "title": "DAMAC EDGNEX Data Center",
+        "category": "PreCooll · 35% chiller energy saved",
+        "location": "Riyadh"
+      },
+      "sattam": {
+        "title": "Prince Sattam bin Abdulaziz University",
+        "category": "Chiller plant",
+        "location": "Al Kharj"
+      },
+      "extra": {
+        "title": "eXtra Electronics",
+        "category": "Retail retrofit · 66% lower cooling bill",
+        "location": "Al Worood, Riyadh"
+      }
+    }
+  },
+  "Partners": {
+    "tag": "PARTNERS",
+    "title": "Best-in-class technology, delivered locally.",
+    "items": {
+      "enerco": {
+        "badge": "Coatings",
+        "title": "Ener.co · Enercoat",
+        "desc": "Coating technology applied in efficiency retrofits alongside mechanical measures."
+      },
+      "hisense": {
+        "badge": "VRF Systems",
+        "title": "Hisense",
+        "desc": "Variable refrigerant flow equipment for multi-zone buildings, with calculations, installation and service from our team."
+      },
+      "oxycom": {
+        "badge": "Netherlands · Sole Partner in the Kingdom",
+        "title": "Oxycom",
+        "desc": "Indirect evaporative cooling — IntrCooll and PreCooll. We handle engineering, installation, commissioning and maintenance across the Kingdom."
+      }
+    }
+  },
+  "slide": "UP",
+  "CTA": {
+    "title": "Ready to cut your cooling cost?",
+    "desc": "Tell us about your building. A Dosan Energy engineer will come back within one working day with the right next step.",
+    "btn": "Request a Site Assessment"
+  },
+  "Insights": {
+    "tag": "Insights",
+    "title": "Cooling, explained simply.",
+    "allArticles": "All Articles →",
+    "featured": {
+      "category": "Kitchen Make-up Air",
+      "badge": "Featured",
+      "readTime": "6 min read",
+      "title": "Kitchen Make-up Air Done Right: Why Restaurants Are Moving Away from DX Fresh-Air Units",
+      "desc": "Why restaurant operators are moving away from DX fresh-air units — extract volumes, replacement air, and what each approach actually costs to run."
+    },
+    "article1": {
+      "category": "PreCooll",
+      "title": "PreCooll Evaporative Cooling Solutions for Existing Chillers and New Installations"
+    },
+    "article2": {
+      "category": "Efficiency",
+      "title": "Adiabatic Pre-Cooling: The Smart Way to Boost Chiller Efficiency"
+    },
+    "article3": {
+      "category": "Saudi Climate",
+      "title": "Designing for Riyadh's Actual Summer, Not the Spec Sheet"
+    }
+  },
+  "footer": {
+    "tagline": "Cooling that costs less to run. Engineering, MEP delivery and analytics across Saudi Arabia.",
+    "address": "ROSHN Front, Sedra, Riyadh",
+    "servicesHeading": "Services",
+    "services": {
+      "kitchen": "Kitchen Make-Up Air",
+      "idec": "Oxycom's IDEC",
+      "precooll": "PreCooll Chiller Pre-Cooling",
+      "vrf": "VRF Systems (Hisense)",
+      "coatings": "HVAC Energy-Saving Coatings",
+      "analytics": "Building Analytics & FDD",
+      "mep": "MEP Services",
+      "engineering": "Engineering & Design"
+    },
+    "companyHeading": "Company",
+    "company": {
+      "about": "About",
+      "projects": "Projects",
+      "partners": "Partners",
+      "insights": "Insights",
+      "contact": "Contact"
+    },
+    "calculatorsHeading": "Calculators",
+    "calculators": {
+      "vrf": "VRF Calculator",
+      "idec": "IDEC Savings Calculator"
+    },
+    "copyright": "© 2026 Dosan Energy. All rights reserved.",
+    "privacy": "Privacy",
+    "sitemap": "Sitemap"
+  }
+}

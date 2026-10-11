@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer components{
+  .data-nav-utility{
+    @apply flex items-center gap-[12px] justify-end
+  }
+}
