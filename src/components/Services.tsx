@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import AnimatedSection from "../Animations/AnimatedSection"
 
 interface ServiceItem {
   id: string;

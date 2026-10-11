@@ -40,7 +40,6 @@ const Project = ({ id, image }: ProjectProps) => {
   const isArabic = i18n.language === "ar";
   const [isHovered, setIsHovered] = useState(false);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-  const imageRef = useRef<HTMLImageElement>(null);
 const [imageSide, setImageSide] = useState<"right" | "left">("right");
 
   const handleMouseMove = (
