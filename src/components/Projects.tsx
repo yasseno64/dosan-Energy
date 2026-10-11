@@ -1,4 +1,4 @@
-import { useState,useRef  } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AnimatedSection from "../Animations/AnimatedSection";
 import project1 from "../assets/dosan-hero.webp";
