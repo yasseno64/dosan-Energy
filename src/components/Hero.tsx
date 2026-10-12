@@ -22,6 +22,8 @@ const reducer = (state: State, action: Action): State => {
 
 const clamp = (v: number, min = 0, max = 1) => Math.min(max, Math.max(min, v));
 
+const isMobile = () => window.innerWidth < 640;
+
 const Hero = () => {
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
@@ -31,6 +33,11 @@ const Hero = () => {
     let raf = 0;
 
     const update = () => {
+      if (isMobile()) {
+        dispatch({ type: "SET_PROGRESS", payload: 0 });
+        return;
+      }
+
       const el = sectionRef.current;
       if (!el) return;
 
@@ -58,7 +65,7 @@ const Hero = () => {
   }, []);
 
   const eased = 1 - Math.pow(1 - progress, 2);
-  const imgScale = START_SCALE - (START_SCALE - END_SCALE) * eased;
+  const imgScale = isMobile() ? 1 : START_SCALE - (START_SCALE - END_SCALE) * eased;
   {/* scroll hint */}
   const [isHidden, setIsHidden] = useState(false);
   useEffect(() => {
@@ -79,8 +86,8 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#030712]"
-      style={{ height: `${100 + SCROLL_LENGTH_VH}vh` }}
+      className="relative bg-[#030712] sm:h-[100vh] h-screen sm:h-auto"
+      style={{ height: typeof window !== "undefined" && !isMobile() ? `${100 + SCROLL_LENGTH_VH}vh` : "100vh" }}
     >
       <div className="sticky top-0 h-screen overflow-hidden bg-[#030712]">
         <div
