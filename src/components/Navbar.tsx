@@ -113,7 +113,7 @@ useEffect(() => {
               alignItems: "center",
               gap: "6px",
               flex: "0 0 auto",
-              fontSize: "11.8px",
+              fontSize: "13.5px",
               fontWeight: "500",
               letterSpacing: "0.3px",
               color: "rgb(255,255,255)",
@@ -121,6 +121,7 @@ useEffect(() => {
               padding: "6px 0px",
               borderBottom: "1px solid transparent",
             }}
+            className="underline decoration-transparent hover:decoration-[#24a88b] decoration-[1.3px] underline-offset-7 "
           >
             {t(`navbar.${link.key}`)}
           </a>
