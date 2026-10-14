@@ -160,7 +160,7 @@ const Footer = () => {
             <a href="/privacy/" className="text-white/62 hover:text-[#1dcca0] transition-colors">
               {t("footer.privacy")}
             </a>
-            <a href="/sitemap.xml" className="text-white/62 hover:text-[#1dcca0] transition-colors">
+            <a href="https://dosanenergy.com/sitemap.xml" className="text-white/62 hover:text-[#1dcca0] transition-colors">
               {t("footer.sitemap")}
             </a>
             <a
