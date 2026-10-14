@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import CountUp from "../Animations/CountUp";
 import AnimatedSection from "../Animations/AnimatedSection";
@@ -11,38 +12,51 @@ interface MetricConfig {
 }
 
 const metrics: MetricConfig[] = [
-  {
-    key: "alfanar",
-    value: 117,
-  },
-  {
-    key: "damac",
-    value: 35,
-  },
-  {
-    key: "extra",
-    value: 49623,
-    separator: ",",
-  },
-  {
-    key: "coolingCost",
-    value: 66,
-  },
-  {
-    key: "tempDrop",
-    value: 20,
-  },
+  { key: "alfanar", value: 117 },
+  { key: "damac", value: 35 },
+  { key: "extra", value: 49623, separator: "," },
+  { key: "coolingCost", value: 66 },
+  { key: "tempDrop", value: 20 },
 ];
 
 const Static = () => {
   const { t } = useTranslation();
 
+  const [mouse, setMouse] = useState({ x: 50, y: 50 });
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <section
-      className="relative overflow-hidden bg-[#071b20] text-white"
+      className="relative overflow-hidden bg-[#14171a] text-white"
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+
+        setMouse({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
+        });
+      }}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       style={{
-        backgroundImage:
-          "radial-gradient(circle at 18% 42%, rgba(15, 173, 149, 0.24), transparent 24%), radial-gradient(circle at 52% 100%, rgba(18, 112, 95, 0.22), transparent 30%), linear-gradient(90deg, #050d12 0%, #071b20 38%, #041a1d 100%)",
+        backgroundImage: `
+          radial-gradient(
+            circle 260px at ${mouse.x}px ${mouse.y}px,
+            rgba(29, 204, 160, ${isHovering ? 0.13 : 0}),
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at 18% 42%,
+            rgba(15, 173, 149, 0.12),
+            transparent 24%
+          ),
+          linear-gradient(
+            90deg,
+            #14171a 0%,
+            #14171a 38%,
+            #14171a 100%
+          )
+        `,
       }}
     >
       <AnimatedSection>
@@ -52,17 +66,14 @@ const Static = () => {
               {t("Static.tag")}
             </span>
 
-            <div className="flex w-full flex-col gap-40 lg:flex-row lg:items-end lg:justify-start">
-              <h2 className="text-start text-[clamp(2.2rem,3vw,4rem)] font-bold leading-[1.1] tracking-[-0.04em] text-white">
+            <div className="flex w-full flex-col gap-10 lg:flex-row lg:items-end lg:justify-start">
+              <h2 className="text-start text-[clamp(2.2rem,3vw,4rem)] font-bold leading-[1.1] tracking-[-0.04em] text-white max-w-[400px]">
                 {t("Static.title")}
               </h2>
 
               <span
                 className="max-w-[38ch] text-start text-xs font-bold leading-[2] tracking-[-0.04em]"
-                style={{
-                  color: "rgba(255, 255, 255, 0.62)",
-                  opacity: 1,
-                }}
+                style={{ color: "rgba(255, 255, 255, 0.62)" }}
               >
                 {t("Static.subtitle")}
               </span>
@@ -73,9 +84,9 @@ const Static = () => {
             {metrics.map((metric) => (
               <div
                 key={metric.key}
-                className="flex min-h-[210px] flex-col justify-end "
+                className="flex min-h-[210px] flex-col justify-end"
               >
-                <div className="text-[clamp(2rem,3vw,4rem)] font-bold leading-none tracking-[-0.06em] text-white hover:text-[#1dcca0]">
+                <div className="text-[clamp(2rem,3vw,4rem)] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-300 hover:text-[#1dcca0]">
                   <CountUp
                     from={0}
                     to={metric.value}
@@ -86,9 +97,8 @@ const Static = () => {
                   />
                   {t(`Static.metrics.${metric.key}.unit`)}
                 </div>
-                  
 
-                <div className="mt-4 space-y-1 text-start mb-[150px]">
+                <div className="mt-4 mb-[150px] space-y-1 text-start">
                   <p className="text-xs leading-relaxed text-gray-400">
                     {t(`Static.metrics.${metric.key}.label`)}
                   </p>
