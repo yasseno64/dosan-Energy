@@ -10,17 +10,17 @@ const Insights = () => {
         {/* Section Header */}
         <div className="flex flex-wrap items-end justify-between gap-[20px] mb-[clamp(30px,4vw,56px)]">
           <div>
-            <p className="m-0 mb-[14px] text-[12px] font-medium tracking-[1.4px] uppercase text-[#1dcca0]">
+            <p className="m-0 mb-[14px] text-[12px] font-medium tracking-[1.4px] uppercase text-[#328f7b] ">
               {t("Insights.tag")}
             </p>
-            <h2 className="m-0 text-[clamp(22.9px,2.4vw,33.6px)] leading-[1.08] tracking-[-1px] font-bold text-white">
+            <h2 className="m-0 text-[clamp(22.9px,2.4vw,33.6px)] leading-[1.08] tracking-[-1px] font-bold text-[#043742]">
               {t("Insights.title")}
             </h2>
           </div>
           <a
-            className="text-[15px] font-semibold text-[#189777] hover:text-[#1dcca0]  transition-colors cursor-pointer"
+            className="text-[12px] font-semibold text-[#328f7b] hover:text-[#1dcca0]  transition-colors cursor-pointer"
           >
-           {t("Insights.allArticles")}
+           {t("Insights.allInsights")}
           </a>
         </div>
 
