@@ -4,6 +4,8 @@ import { initReactI18next } from "react-i18next";
 import en from "./locales/en.json";
 import ar from "./locales/ar.json";
 
+const savedLang = localStorage.getItem("lang") || "en";
+
 i18n
   .use(initReactI18next)
   .init({
@@ -16,12 +18,16 @@ i18n
       },
     },
 
-    lng: "en",
+    lng: savedLang,
     fallbackLng: "en",
 
     interpolation: {
       escapeValue: false,
     },
   });
+
+i18n.on("languageChanged", (lng) => {
+  localStorage.setItem("lang", lng);
+});
 
 export default i18n;

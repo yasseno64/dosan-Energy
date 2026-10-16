@@ -20,13 +20,15 @@ const metrics: MetricConfig[] = [
 ];
 
 const Static = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
 
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState(false);
 
   return (
     <section
+      dir={isArabic ? "rtl" : "ltr"}
       className="relative overflow-hidden bg-[#14171a] text-white"
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -81,30 +83,35 @@ const Static = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-2 xl:grid-cols-5">
-            {metrics.map((metric) => (
-              <div
-                key={metric.key}
-                className="flex min-h-[210px] flex-col justify-end"
-              >
-                <div className="text-[clamp(2rem,3vw,4rem)] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-300 hover:text-[#1dcca0]">
-                  <CountUp
-                    from={0}
-                    to={metric.value}
-                    separator={metric.separator || ""}
-                    direction="up"
-                    duration={1}
-                    delay={0}
-                  />
-                  {t(`Static.metrics.${metric.key}.unit`)}
-                </div>
+            
+{metrics.map((metric, index) => (
+  <div
+    key={metric.key}
+    className="flex min-h-[210px] flex-col justify-end animate-metric"
+    style={{
+      animationDelay: `${index * 0.3}s`,
+    }}
+  >
+    <div className="text-[clamp(2rem,3vw,4rem)] font-bold leading-none tracking-[-0.06em] text-white transition-colors duration-300 hover:text-[#1dcca0]">
+      <CountUp
+        from={0}
+        to={metric.value}
+        separator={metric.separator || ""}
+        direction="up"
+        duration={1}
+        delay={index * 0.3}
+      />
+      {t(`Static.metrics.${metric.key}.unit`)}
+    </div>
 
-                <div className="mt-4 mb-[150px] space-y-1 text-start">
-                  <p className="text-xs leading-relaxed text-gray-400">
-                    {t(`Static.metrics.${metric.key}.label`)}
-                  </p>
-                </div>
-              </div>
-            ))}
+    <div className="mt-4 mb-[150px] space-y-1 text-start">
+      <p className="text-xs leading-relaxed text-gray-400">
+        {t(`Static.metrics.${metric.key}.label`)}
+      </p>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </AnimatedSection>
